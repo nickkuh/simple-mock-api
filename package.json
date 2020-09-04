@@ -1,6 +1,6 @@
 {
   "name": "simple-mock-api",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A lightwight and easy to use mock api for rest",
   "license": "MIT",
   "main": "./src/index.js",
