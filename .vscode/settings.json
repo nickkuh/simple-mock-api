@@ -1,0 +1,15 @@
+{
+  "files.autoSave": "off",
+  "eslint.enable": true,
+  "eslint.autoFixOnSave": true,
+  "editor.formatOnSave": false,
+  "eslint.validate": [
+    {
+      "language": "javascript",
+      "autoFix": true
+    }
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "@nickkuh/simple-mock-api",
+  "version": "0.0.3",
+  "description": "A lightwight and easy to use mock api for rest",
+  "license": "MIT",
+  "main": "./src/index.js",
+  "scripts": {
+    "lint": "eslint src",
+    "test": "node test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:nickkuh/simple-mock-api.git"
+  },
+  "author": "Nick Kuh",
+  "dependencies": {
+    "express": "^4.17.1",
+    "opn": "^6.0.0",
+    "path": "^0.12.7"
+  },
+  "homepage": "https://github.com/nickkuh/simple-mock-api",
+  "keywords": [
+    "mock api",
+    "api",
+    "rest api",
+    "react",
+    "react native"
+  ],
+  "devDependencies": {
+    "eslint": "^6.5.1",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "prettier": "^1.18.2"
+  }
+}
