@@ -2,6 +2,7 @@ const path = require('path')
 const fs = require('fs')
 const successHttpResponses = [200, 201, 202, 203, 204, 205, 206, 207, 208, 226]
 const redirectHttpResponses = [302]
+const Querystring = require('querystring')
 
 class Responses {
   constructor(config = {}) {
@@ -72,6 +73,7 @@ class Responses {
     let method = this.httpMethod(req).toLowerCase()
     let relativePath = this.relativePath(req)
     let key = this.responseKey(req)
+    let querystring = Querystring.stringify(req.query)
     let responseObj
     let code
     let filename
@@ -100,6 +102,9 @@ class Responses {
     if (responseObj.suffix !== undefined) {
       filename += '-' + responseObj.suffix
     }
+    if (querystring.length > 0) {
+      filename = '/' + querystring + '/'
+    }
 
     let json = {}
     if (responseObj.json !== undefined) {
@@ -111,6 +116,15 @@ class Responses {
       }
     } else {
       let file = path.join(this.responsesDir, relativePath, `${filename}.json`)
+      if (querystring.length > 0) {
+        file = path.join(
+          this.responsesDir,
+          relativePath,
+          filename,
+          `${method}${code}.json`,
+        )
+      }
+      
       if (fs.existsSync(file)) {
         let contents = fs.readFileSync(file)
 
