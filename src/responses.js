@@ -67,6 +67,8 @@ class Responses {
   }
 
   respond(req, res) {
+    res.set('Cache-Control', 'no-store')
+
     let method = this.httpMethod(req).toLowerCase()
     let relativePath = this.relativePath(req)
     let key = this.responseKey(req)
