@@ -21,4 +21,5 @@ app.listen(port, err => {
   console.log(`> Ready on http://localhost:${port}/api/`)
   // opens the url in the default browser
   opn(`http://localhost:${port}/api/todos`)
+  opn(`http://localhost:${port}/api/query?parameter=this`)
 })

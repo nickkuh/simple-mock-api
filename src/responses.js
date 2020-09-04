@@ -121,10 +121,10 @@ class Responses {
           this.responsesDir,
           relativePath,
           filename,
-          `${method}${code}.json`,
+          `${method}${code}.json`
         )
       }
-      
+
       if (fs.existsSync(file)) {
         let contents = fs.readFileSync(file)
 
